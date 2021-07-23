@@ -1,5 +1,20 @@
 # Changelog
 
+## \[0.5.0]
+
+- Move `global_shortcut` mod to the lib root.
+  - [6e72e54c](https://github.com/tauri-apps/tao/commit/6e72e54c9bb897a8f4319f3f5ec8f7d96bec75d2) refactor: move `global_shortcut` mod to lib roo ([#145](https://github.com/tauri-apps/tao/pull/145)) on 2021-07-20
+- Remove Clipboard MenuItem on Linux since they only work on a few sepcific widget.
+  - [969052ab](https://github.com/tauri-apps/tao/commit/969052abab84ff6ad7b43f39e444e944b2de862d) fix(linux): remove clipboard menuitems on Linux ([#150](https://github.com/tauri-apps/tao/pull/150)) on 2021-07-21
+- Fix `no key equivalent for Accelerator` for `Space`, `Escape`, `Minus` and `Equal` keycode.
+  - [ecd3c405](https://github.com/tauri-apps/tao/commit/ecd3c405cd57852e3a55a9a6539784b99f32bf6c) fix(accelerator): add missing KeyCode to prevent `no key equivalent for Accelerator` ([#148](https://github.com/tauri-apps/tao/pull/148)) on 2021-07-20
+- Removed `SystemTrayExtWindows::remove()`, the icon will be automatically removed when `SystemTray` is dropped.
+  - [cc9d2b17](https://github.com/tauri-apps/tao/commit/cc9d2b1726d378ee28ca69e6e5e2255c2d71f214) refactor: refactor `system_tray` impl on windows ([#153](https://github.com/tauri-apps/tao/pull/153)) on 2021-07-22
+- Add `MenuItem::SelectAll` implementation on windows.
+  - [222adeb2](https://github.com/tauri-apps/tao/commit/222adeb238c290b8101507aed976869c34a8d4ab) feat(window): add `Select all` native menu item ([#146](https://github.com/tauri-apps/tao/pull/146)) on 2021-07-21
+- Add flags to support all other possible unix systems.
+  - [546f51a3](https://github.com/tauri-apps/tao/commit/546f51a3974c15af0d6c84525d3c8e448911f8a8) Add flags to support other unix systems. ([#142](https://github.com/tauri-apps/tao/pull/142)) on 2021-07-20
+
 ## \[0.4.0]
 
 - On Windows, Allow resizing of `decorations: false` aka borderless window.
